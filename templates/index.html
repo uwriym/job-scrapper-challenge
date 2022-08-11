@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Search</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .title {
+      width: 100%;
+      text-align: center;
+    }
+    .search-box {
+      padding: 20px;
+      border: 2px solid rgba(0,0,0,0.3);
+      border-radius: 10px;
+      transition: border-color .3s ease-in-out;
+    }
+    .search-box:focus-within {
+      border-color: rgba(0,0,0,0.7);
+    }
+    input {
+      border: none;
+      border-bottom: 2px solid rgba(0,0,0,0.5);
+      font-size: 13px;
+      padding-bottom: 3px;
+      margin-right: 5px;
+    }
+    input:focus {
+      outline: none;
+    }
+    button {
+      padding: 5px 6px;
+      background-color: black;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+    bottom {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+    }
+    #so, #wwr, #ro {
+      text-decoration: none;
+      color: black;
+      transition: color .3s ease-in-out;
+    }
+    #so:hover {
+      color: rgb(242, 119, 33);
+    }
+    #wwr:hover {
+      color: rgb(238, 54, 54);
+    }
+    #ro:hover {
+      color: rgb(254, 61, 57);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Job Search</h1>
+  <box class="search-box">
+    <form action="/report" method="get">
+      <label for="search-job">Search by term:</label>
+      <input id="search-job" type="text" placeholder="i.e. python" required name="word"/>
+      <button type="submit">Find my job</button>
+    </form>
+  </box>
+  <bottom>
+    <span class="bottom">Powered by</span>
+    <a href="https://stackoverflow.com/jobs" id="so">Stack Overflow</a>
+    /
+    <a href="https://weworkremotely.com/remote-jobs/search" id="wwr">We Work Remotely</a>
+    /
+    <a href="https://remoteok.com/" id="ro">Remote Ok</a>
+  </bottom>
+  
+</body>
+</html>
